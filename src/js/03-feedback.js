@@ -44,7 +44,3 @@ const saveTimeToLS = throttle(currentTime => {
 }, 500);
 
 refs.form.addEventListener('submit', pressSubmit);
-
-// - логіка яка при завантаженні сторіки перевіряє сховище JSON pars і підставляє в форму
-
-// - в кінці очищувати форму очищувати сховище
