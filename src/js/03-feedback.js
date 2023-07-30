@@ -30,17 +30,17 @@ function getVelueFromLS() {
 }
 
 function pressSubmit(event) {
+  event.preventDefault();
+
   const feedbackSave = {
     email: refs.inputEmail.value,
     message: refs.textMassage.value,
   };
 
+  console.log(feedbackSave);
+
   localStorage.clear();
   refs.form.reset();
 }
-
-const saveTimeToLS = throttle(currentTime => {
-  localStorage.setItem(LS_KEY, currentTime);
-}, 500);
 
 refs.form.addEventListener('submit', pressSubmit);
